@@ -32,12 +32,14 @@ All prices update automatically with your spreadsheet (default is ~1 minute).
 - `amount` is the quantity of that crypt you want to convert.
 - `type` is "buy", "sell", or "spot"
 - `currency` is a physical currency to convert. (i.e. "USD" for US. Dollars, "GPB" for British Pounds, etc..)
+
 ![Example](https://media.giphy.com/media/xULW8lDLCoYeUhPaZq/giphy.gif)
 
 
 ### getPrices()
 `=getPrices()`
 Returns a grid with current prices for 4 cryptocurrencies.
+
 ![Example](https://media.giphy.com/media/l49JNr1bqtEZ0qcYU/giphy.gif)
 
 Questions? Comments? Ask me!
