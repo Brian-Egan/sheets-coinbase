@@ -15,7 +15,7 @@ All prices update automatically with your spreadsheet (default is ~1 minute).
 2. A new script editor window opens. In this window, copy/paste the contents of `cryptos.gs`. 
 3. Call `=getPrice()`, `=getValue()`, and `=getPrices()` in your sheet! See examples below.
 
-## Examples
+## Usage and Examples
 
 ### getPrice()
 `=getPrice(cryptocurrency, type, currency)`
