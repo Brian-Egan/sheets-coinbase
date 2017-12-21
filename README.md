@@ -1,9 +1,10 @@
 # Google Sheets -> Coinbase Price Lookup
 
 This adds three functions to your Google Sheet - `=getPrice()`, `=getValue()`, and `=getPrices()`. 
-    **getPrice** takes a cryptocurrency name or cell containing a crytocurrency and returns it's current price.
-    **getValue** takes a cryptocurrency name, a quantity of that currency, and (optional) national currency and type ("buy"/"sell") and returns the value of that cryptocurrency.
-    **getPrices** returns a grid containing the current buy and sell prices for 4 cryptocurrencies (Bitcoin, Bitcoin Cash, Ethereum, Litecoin). 
+   
+- **getPrice** takes a cryptocurrency name or cell containing a crytocurrency and returns it's current price.
+- **getValue** takes a cryptocurrency name, a quantity of that currency, and (optional) national currency and type ("buy"/"sell") and returns the value of that cryptocurrency.
+- **getPrices** returns a grid containing the current buy and sell prices for 4 cryptocurrencies (Bitcoin, Bitcoin Cash, Ethereum, Litecoin). 
 
 
 ## How to install
