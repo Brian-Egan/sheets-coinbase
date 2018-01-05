@@ -1,5 +1,14 @@
 # Google Sheets -> Coinbase Price Lookup
 
+##### V2 Functions
+If included, the "sheet_functions.gs" file will add a menu to your spreadsheet, which when clicked will add a timer that allows your prices to auto-update every minute. After the initial setup, add "auto_update" as the final argument to all the functions listed below. They will update like magic!
+
+e.g. `=getPrice("Ripple", auto_update)` or `=getPrices(auto_update)`
+
+Also, added support for Ripple!
+
+##### V1
+
 This adds three functions to your Google Sheet - `=getPrice()`, `=getValue()`, and `=getPrices()`. 
    
 - **getPrice** takes a cryptocurrency name or cell containing a crytocurrency and returns it's current price.
@@ -41,5 +50,7 @@ All prices update automatically with your spreadsheet (default is ~1 minute).
 Returns a grid with current prices for 4 cryptocurrencies.
 
 ![Example](https://media.giphy.com/media/l49JNr1bqtEZ0qcYU/giphy.gif)
+
+
 
 Questions? Comments? Ask me!

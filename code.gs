@@ -29,7 +29,9 @@ NAMES = {
 // Returns a 5 row grid (including header) with the latest buy/sell prices for each currency. Auto-updates with your spreadsheet settings (default is ~1 minute).
 // Currency is optional and defaults to US Dollar ("USD")
 function getPrices(currency) {
+  currency = isLastArgObject(arguments) ? null : currency;
   resp = [["Crypto", "Sell Price", "Buy Price"]];
+//  return Function.length;
   for (c in CURRS) {
    resp.push(priceRow(c, currency)); 
   };
@@ -47,6 +49,8 @@ function priceRow(crypto, currency) {
 
 // Given a crypto currency or it's abbreviation and the type ("buy", "sell", "spot") will return a decimal of that price. Currency is optional and defaults to US Dollars ("USD")
 function getPrice(crypto, type, currency) {
+  args = ["crypto","type","currency"];
+  args.forEach(function(i) { if (isObject(eval(i))) { eval(i + " = null;"); }});
   crypto = crypto || "Bitcoin";
   var symbol = getSymbol(crypto);
   type = type || "sell";
@@ -73,6 +77,15 @@ function getValue(crypto, amount, currency, type) {
 // ------
 // HELPER FUNCTIONS
 // ------
+
+// Useful for when a time is passed as final argument. For auto-updating functions.
+function isLastArgObject(args) {
+  return (typeof(args[args.length - 1]) == "object") ? true : false;
+}
+
+function isObject(arg) {
+  return (typeof(arg) == "object") ? true : false;
+}
 
 // Fetches the given Coinbase API URL, parses the response and returns it. 
 function getFromApi(url, type) {
