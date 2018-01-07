@@ -12,7 +12,7 @@ function updateTimer() {
 function createUpdateTimer() {
  ScriptApp.newTrigger('updateTimer')
       .timeBased()
-      .everyMinutes(1) // This can be set to 1,5,10, etc..
+      .everyMinutes(5) // This can be set to 1,5,10, etc..
       .create(); 
 }
 
