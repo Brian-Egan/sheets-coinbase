@@ -1,5 +1,6 @@
 function onOpen() {
  var menu = SpreadsheetApp.getUi().createMenu('Cryptos Update')
+ menu.addItem('Refresh','updateTimer')
  menu.addItem('Add auto-update timer','timerFromMenu')
  .addToUi(); 
 }
