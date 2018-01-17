@@ -1,11 +1,23 @@
 # Google Sheets -> Cryptocurrency Price Lookup
 
-##### V2 Functions
-If included, the "sheet_functions.gs" file will add a menu to your spreadsheet, which when clicked will add a timer that allows your prices to auto-update every minute. After the initial setup, add "auto_update" as the final argument to all the functions listed below. They will update like magic!
+##### Version 3
+**Auto-update timer**
+The first time you close & re-open your spreadsheet _after_ adding this code, a new "Cryptos Update" menu will appear with two options: "Refresh" and "Add auto-update timer". Due to the way Google Sheets works with external requests and custom functions, **you must select "Add auto-update timer" before "Refresh" or any auto-updates will work**. 
+
+![Custom menu](https://i.imgur.com/ezUPqNl.png)
+
+Select "Add auto-update timer" and a new background tab titled "Timer" will be added to your sheet. You can ignore _(but do not delete)_ this. After the initial setup, simple `auto_update` as the final argument to all the functions listed below. They will update every 5 minutes like magic! 
 
 e.g. `=getPrice("Ripple", auto_update)` or `=getPrices(auto_update)`
 
-Also, added support for Ripple!
+![Formula with auto-update](https://i.imgur.com/0hcxB19.png)
+
+After this setup, selecting _Refresh_ from the _Cryptos Update_ menu will trigger an automatic update of prices.
+
+**Explanation:** If you're curious why I set it up this way - it's due to the limitations Google Sheets puts on custom formulas. They will only update when one of the formulas arguments change. We force the update by referencing the auto-updating timer added above in our `=getPrices()` formula.
+
+##### V2 Functions
+Added support for Ripple!
 
 ##### V1
 
