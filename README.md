@@ -1,4 +1,4 @@
-# Google Sheets -> Coinbase Price Lookup
+# Google Sheets -> Cryptocurrency Price Lookup
 
 ##### V2 Functions
 If included, the "sheet_functions.gs" file will add a menu to your spreadsheet, which when clicked will add a timer that allows your prices to auto-update every minute. After the initial setup, add "auto_update" as the final argument to all the functions listed below. They will update like magic!
